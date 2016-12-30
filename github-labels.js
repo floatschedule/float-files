@@ -97,6 +97,9 @@ function addLabel (label) {
     "color": "fef2c0"
   },
   {
+    "name": "help wanted",
+    "color": "128A0C"
+  {
     "name": "wontfix",
     "color": "ffffff"
   }
