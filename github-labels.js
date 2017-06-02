@@ -57,7 +57,7 @@ function addLabel (label) {
     "color": "fbca04"
   },
   {
-    "name": "priority: trivial",
+    "name": "priority: minor",
     "color": "207de5"
   },
   {
