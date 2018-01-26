@@ -5,18 +5,20 @@ function updateLabel (label) {
     if (element.querySelector('.label-link').textContent.trim() === label.name) {
       flag = true
       element.querySelector('.js-edit-label').click()
-      element.querySelector('.label-edit-name').value = label.name
-      element.querySelector('.color-editor-input').value = '#' + label.color
-      element.querySelector('.new-label-actions .btn-primary').click()
+      element.querySelector('.js-new-label-name-input').value = label.name
+      element.querySelector('.js-new-label-color-input').value = '#' + label.color
+      element.querySelector('.js-edit-label-cancel ~ .btn-primary').disabled = false
+      element.querySelector('.js-edit-label-cancel ~ .btn-primary').click()
     }
   })
   return flag
 }
 
 function addNewLabel (label) {
-  document.querySelector('.new-label input#label-').value = label.name
-  document.querySelector('.new-label input#edit-label-color-new').value = '#' + label.color
-  document.querySelector('.new-label-actions .btn-primary').click()
+  document.querySelector('.js-new-label-name-input').value = label.name
+  document.querySelector('.js-new-label-color-input').value = '#' + label.color
+  document.querySelector('.js-details-target ~ .btn-primary').disabled = false
+  document.querySelector('.js-details-target ~ .btn-primary').click()
 }
 
 function addLabel (label) {
@@ -107,9 +109,3 @@ function addLabel (label) {
 ].forEach(function(label) {
   addLabel(label)
 });
-
-// thanks to:
-// https://gist.github.com/Isaddo/7efebcb673a0957b9c6f07cd14826ea4
-// https://gist.github.com/MoOx/93c2853fee760f42d97f
-
-// https://github.com/popomore/github-labels
